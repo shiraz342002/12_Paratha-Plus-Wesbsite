@@ -272,3 +272,65 @@ filter: drop-shadow(0 8px 24px hsla(22,100%,8%,.2));
     margin-bottom: 1rem;
     font-weight: var(--font-bold);
 }
+.popular{
+    background-color: var(--body-color--alt);
+}
+.popular_container{
+    padding-block: 2rem;
+    grid-template-columns: repeat(2,1fr);
+    gap:3.5rem 1.5rem;
+}
+.popular_card{
+    position: relative;
+    background-color: var(--first-color);
+    padding: 6rem .75rem;
+    border-radius: 1rem;
+    border: 4px solid hsla(34, 100%, 96%);
+    text-align: center;
+    height: 340px;
+}
+.popular__img{
+    height: 140px;
+    width: 140px;
+    position: absolute;
+    top: 1.2rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.popular_title{
+    position: absolute;
+    bottom: 95px;
+    right: .1rem;
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+    
+
+}
+.popular_price{
+position: absolute;
+bottom: 65px;
+color: black;
+left: 45px;
+font-size: var(--h2-font-size);
+/* font-weight: var(--font-bold); */
+font-weight: 800;
+}
+.popular_button{
+    position: absolute;
+    bottom: 14px;
+    left: 66px;
+font-size: var(--h2-font-size);
+outline: none;
+font-weight: 800;
+border: none;
+background-color: var(--second-color);
+color: var(--white-color);
+padding: 6px;
+font-size: 1.25rem;
+display: inline-flex;
+cursor: pointer;
+}
+.popular_card:hover .popular__img{
+transform: translateY(-.5rem)
+}
