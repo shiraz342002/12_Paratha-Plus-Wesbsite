@@ -32,7 +32,38 @@ const shadowHeader=()=>{
 }
 window.addEventListener('scroll',shadowHeader)
 
-//Makint the scroll icon appear if we are the bottom
+//Make the scroll icon appear if we are the bottom
 const scrollup=()=>{
-    const scroll_up=document.querySelector('scroll_up')
+    const scroll_up=document.querySelector('.scroll_up')
+    if(this.scrollY>=350){
+        scroll_up.classList.add('show_scroll_btn')
+    }
+    else{
+        scroll_up.classList.remove('show_scroll_btn')
+    }
 }
+window.addEventListener('scroll',scrollup);
+
+const sections = document.querySelectorAll('section[id]');
+const headerHeight = 45; // Adjust based on your header height
+const offsetTrigger = 300; // Adjust this value to trigger the class earlier
+
+const scroll_active = () => {
+    const scroll_down = window.scrollY;
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - headerHeight - offsetTrigger;
+        const sectionId = current.getAttribute('id');
+        const sectionClass = document.querySelector('.nav_menu a[href*=' + sectionId + ']');
+
+        if (scroll_down >= sectionTop && scroll_down < sectionTop + sectionHeight) {
+            sectionClass.classList.add('active_link');
+        } else {
+            sectionClass.classList.remove('active_link');
+        }
+    });
+};
+
+window.addEventListener('scroll', scroll_active);
+
