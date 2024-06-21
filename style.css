@@ -462,3 +462,20 @@ margin-top: -1rem;
     width: .6rem;
     background-color: hsl(34, 16%, 55%);
 }
+.scroll_up{
+    position: fixed;
+    right: 1rem;
+    bottom: -50%;
+    background-color: var(--body-color);
+    box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
+    display: inline-flex;
+    padding: 6px;
+    font-size: 1.25rem;
+    border-radius: .35rem;
+    z-index: var(--z-tooltip);
+    transition: bottom .4s transform .4s;
+}
+.scroll_up:hover{
+transform: translateY(-.5rem);
+
+}

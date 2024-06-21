@@ -31,3 +31,8 @@ const shadowHeader=()=>{
     }
 }
 window.addEventListener('scroll',shadowHeader)
+
+//Makint the scroll icon appear if we are the bottom
+const scrollup=()=>{
+    const scroll_up=document.querySelector('scroll_up')
+}
