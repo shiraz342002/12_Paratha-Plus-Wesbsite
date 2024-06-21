@@ -252,7 +252,7 @@ filter: drop-shadow(0 8px 24px hsla(22,100%,8%,.2));
 .recipe_box img{
     width: 60px;
     height: 60px;
-    filter: drop-shadow(0 8px 24px hsla(22,100%,8%,.2));;
+    filter: drop-shadow(0 8px 24px hsla(22,100%,8%,.2));
 }
 .ingredient_title{
     font-size: var(--normal-font-size);
@@ -333,4 +333,20 @@ cursor: pointer;
 }
 .popular_card:hover .popular__img{
 transform: translateY(-.5rem)
+}
+
+.deliver_container{
+    position: relative;
+    text-align: center;
+}
+.deliver_container .section_title{
+    margin-bottom: 1rem;
+}
+.delivery_description{
+    margin-bottom: 1.5rem;
+}
+.delivery_image{
+    width: 320px;
+    justify-self: center;
+    filter: drop-shadow(0 8px 24px hsla(22,100%,8%,.2));
 }
